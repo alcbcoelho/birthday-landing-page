@@ -1,0 +1,94 @@
+@use '../vars';
+
+.infobar {
+    padding: 36px 32px 32px;
+    color: vars.$color-text-secondary;
+    background-color: vars.$color-background-infobar;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: space-between;
+    align-items: center;
+
+    &__info {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+
+        &__item {
+            position: relative;
+            border: 2px lighten(vars.$color-text-secondary, 70%) solid;
+            border-radius: 4px;
+            color: vars.$color-text-secondary;
+            padding: 16px;
+
+            b {
+                position: absolute;
+                top: -24px;
+                left: -16px;
+                display: block;
+                font-size: 1.5rem;
+                font-weight: 600;
+                background-color: vars.$color-background-infobar;
+                padding: 4px 8px 4px 16px;
+            }
+        }
+    }
+
+    &__form {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+
+        &__field {
+            position: relative;
+
+            label {
+                position: absolute;
+                top: -8px;
+                left: -1px;
+                font-size: 0.75rem;
+                font-weight: 300;
+                padding: 0 8px 4px 0;
+                background-color: vars.$color-background-infobar;
+                display: block;
+            }
+
+            input {
+                padding: 8px;
+                padding-top: 12px;
+                font-size: 1rem;
+                border: none;
+                border-bottom: 2px lighten(vars.$color-text-secondary, 80%) solid;
+                background-color: transparent;
+                color: vars.$color-button;
+
+                &:focus {
+                    outline-color: vars.$color-button;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: vars.$bp-mobile) {
+        display: block;
+
+        &__info {
+            display: block;
+
+            &__item {
+                margin-bottom: 36px;
+            }
+        }
+    }
+
+    @media screen and (max-width: vars.$bp-tablet) {
+        &__form {
+            flex-direction: column;
+            justify-content: center;
+            gap: 36px;
+        }
+    }
+}

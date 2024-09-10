@@ -1,0 +1,39 @@
+@use 'vars';
+@use 'hero';
+@use 'event';
+@use 'footer';
+@use './components/infobar';
+@use './components/button';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", "sans-serif";
+    list-style: none;
+}
+
+body {
+    color: vars.$color-text-primary;
+}
+
+.container {
+    @function container-max-width-based-on-padding($padding-value) {
+        @return calc(100% - 2 * $padding-value);
+    }
+
+    max-width: 1024px;
+    width: 100%;
+    padding: 0 32px;
+    margin: 0 auto;
+    
+    @media screen and (max-width: vars.$bp-tablet) {
+        max-width: container-max-width-based-on-padding(48px);
+        padding: 0;
+    }
+    
+    @media screen and (max-width: vars.$bp-mobile) {
+        max-width: container-max-width-based-on-padding(32px);
+    }
+
+}

@@ -1,0 +1,18 @@
+@use 'sass:color';
+
+$color-background-infobar: #fff;
+$color-background-footer: #000;
+$color-overlay: #000;
+
+$color-text-primary: #fff;
+$color-text-secondary: #000;
+$color-text-highlight: #ffd000;
+$color-text-shadow: rgba(0, 0, 0, 0.5);
+
+$color-button: #4f2ac3;
+
+$color-gradient-1: #111138;
+$color-gradient-2: lighten($color-gradient-1, 12.5%);
+
+$bp-mobile: 767px;
+$bp-tablet: 991px;

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebre meu aniversário comigo! 🎉</title>
+    <link rel="stylesheet" href="./styles/main.scss">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <header class="hero">
+        <div class="container">
+            <p class="hero__paragraph">
+                Completo <span id="age">30 anos</span> em <span id="counter"></span> 🎉
+            </p>
+            <p class="hero__paragraph">
+                Venha celebrar comigo!
+            </p>
+            <div class="infobar">
+                <ul class="infobar__info">
+                    <li class="infobar__info__item">
+                        <b>Onde</b>
+                        <p>Bellagio Hotel & Casino - Las Vegas - NV</p>
+                    </li>
+                    <li class="infobar__info__item">
+                        <b>Quando</b>
+                        <p>31/12/2024 às 19h</p>
+                    </li>
+                </ul>
+                <form class="infobar__form">
+                    <div class="infobar__form__field">
+                        <label for="name">Seu nome:</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="infobar__form__field">
+                        <label for="email">Seu email:</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <button type="submit" class="button button--primary" href="#">
+                        Confirmar presença
+                    </button>
+                </form>
+            </div>
+        </div>
+    </header>
+    <section class="event">
+        <div class="container" data-aos="fade-right">
+            <div class="event__details">
+                <h2 class="event__details__title">Três décadas de vida</h2>
+                <p class="event__details__description">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat incidunt laudantium quas repudiandae accusantium sunt, aperiam ea, quasi dolorum blanditiis architecto ut illo quaerat nobis dicta eligendi enim tempore quis.
+                </p>
+            </div>
+            <img class="event__image" src="./images/30-years.jpg" alt="Front-End">
+        </div>
+    </section>
+    <section class="event event--image-background">
+        <div class="container" data-aos="fade-up">
+            <div class="event__details">
+                <h2 class="event__details__title">Em Las Vegas, baby!</h2>
+                <p class="event__details__description">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat incidunt laudantium quas repudiandae accusantium sunt, aperiam ea, quasi dolorum blanditiis architecto ut illo quaerat nobis dicta eligendi enim tempore quis.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="event event--overflow-x event--reverse-direction">
+        <div class="container" data-aos="fade-left">
+            <div class="event__details">
+                <h2 class="event__details__title">No Hotel Bellagio, um dos mais icônicos da cidade</h2>
+                <p class="event__details__description">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat incidunt laudantium quas repudiandae accusantium sunt, aperiam ea, quasi dolorum blanditiis architecto ut illo quaerat nobis dicta eligendi enim tempore quis.
+                </p>
+            </div>
+            <img class="event__image" src="./images/bellagio.jpg" alt="Bellagio Hotel & Casino">
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 - André Coêlho</p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./scripts/main.js"></script>
+</body>
+</html>

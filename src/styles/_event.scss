@@ -1,0 +1,71 @@
+@use 'vars';
+@use 'mixins';
+
+.event {
+    padding: 80px 0;
+    background-image: linear-gradient(90deg, vars.$color-gradient-1 0%, vars.$color-gradient-2 25%, vars.$color-gradient-2 75%, vars.$color-gradient-1);
+    
+    .container {
+        position: relative;
+        display: flex;
+        gap: 40px;
+    }
+
+    &--image-background {
+        position: relative;
+        background: url(../images/las-vegas.jpg) 45% 30% no-repeat; //
+        background-size: cover;
+        padding-bottom: 320px;
+
+        @include mixins.set-up-overlay(0.7);
+    }
+
+    &--overflow-x {
+        overflow-x: hidden;
+    }
+
+    &--reverse-direction {
+        .container {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__image {
+        border-radius: 8px;
+        max-width: 424px;
+        width: 100%;
+    }
+
+    &__details {
+        &__title {
+            font-size: 1.5rem;
+            line-height: 32px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        &__description {
+            line-height: 22px;
+        }
+    }
+
+    @media screen and (max-width: vars.$bp-mobile) {
+        padding: 48px 0;
+
+        &--image-background {
+            padding-bottom: 320px;
+        }
+
+        .container {
+            display: block;
+        }
+
+        &__details {
+            margin-bottom: 32px;
+
+            &__title {
+                margin-bottom: 32px;
+            }
+        }
+    }
+}

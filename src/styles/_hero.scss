@@ -1,0 +1,42 @@
+@use 'vars';
+@use 'mixins';
+
+.hero {
+    position: relative;
+    padding: 64px 0px 96px;
+    background: url(../images/hero-bg.jpg) center no-repeat;
+    background-size: cover;
+
+    .container {
+        position: relative;
+    }
+
+    @include mixins.set-up-overlay(0.725);
+
+    &__paragraph {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 56px;
+        text-shadow: 1px 1px 10px vars.$color-text-shadow;
+        text-align: center;
+        margin-bottom: 48px;
+
+        #age {
+            color: vars.$color-text-highlight;
+        }
+    }
+
+    @media screen and (max-width: vars.$bp-mobile) {
+        padding: 48px 0;
+
+        &__paragraph {
+            font-size: 1.5rem;
+            line-height: 32px;
+            margin-bottom: 24px;
+
+            &:last-of-type {
+                margin-bottom: 40px;
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+@use '../vars';
+
+.button {
+    padding: 12px 16px;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    white-space: nowrap;
+    cursor: pointer;
+    
+    &--primary {
+        color: vars.$color-text-primary;
+        background-color: vars.$color-button;
+        transition: background-color 0.15s;
+
+        &:hover {
+            background-color: lighten(vars.$color-button, 15%);
+        }
+    }
+
+    @media screen and (max-width: vars.$bp-tablet) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

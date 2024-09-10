@@ -1,0 +1,11 @@
+@use 'vars';
+
+.footer {
+    padding: 16px 0;
+    background-color: vars.$color-background-footer;
+    text-align: center;
+    
+    p {
+        font-size: 0.75rem;
+    }
+}
